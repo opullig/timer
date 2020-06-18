@@ -125,6 +125,40 @@ footer{ margin-bottom: 1em; }
 
 .group-button button.stop:hover{ background-color: #c52626;}
 
-.group-button button.pause{ background-color: #9a9a9a};
+.group-button button.default{ background-color: #9a9a9a;}
 
-.group-button button.pause:hover{ background-color: #5a5a5a;}
+.group-button button.default:hover{ background-color: #5a5a5a;}
+
+#lap-time{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0.5em;
+    height: 200px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+}
+
+#lap-time::-webkit-scrollbar{
+   display: none;
+}
+
+#lap-time li{
+    font-weight: bold;
+    font-size: 1.3em;
+    font-family: var(--text-font);
+    color: #646464;
+}
+
+#btn-clear-lap{
+    width: 90px;
+    height: 40px;
+    border-radius: 14px;
+    font-size: 0.75em;
+    
+    position: absolute;
+    bottom: 85px;
+    left: 50%;
+    transform: translateX(-50%);
+}

@@ -13,12 +13,16 @@
         </header>
         <main>
             <div class="timer">
-                <p id="timer-number">0:0:0.0</p>
+                <p id="timer-number">00:00:00.0</p>
                 <div class="group-button">
                     <button id="btn-play" class="play">Start</button>
-                    <button id="btn-pause" class="hidden pause">Pause</button>
+                    <button id="btn-pause" class="hidden default">Pause</button>
+                    <button id="btn-lap" class="default">Marcar</button>
                     <button id="btn-stop"class="stop">Stop</button>
+                    <button id="btn-clear-lap" class="default hidden">Limpar tempo</button>
                 </div>
+                <ul id="lap-time">
+                </ul>
             </div>
         </main>
         <footer>

@@ -11,14 +11,25 @@ const stopBtn  = document.querySelector("#btn-stop");
 const pauseBtn = document.querySelector("#btn-pause");
 const lapBtn   = document.querySelector("#btn-lap");
 const clearBtn = document.querySelector("#btn-clear-lap");
+const themeBtn = document.querySelector("#theme-check");
 
 const lapDiv   = document.querySelector("#lap-time");
+const mainContainer = document.querySelector("#main-container");
+const themeIcon = document.querySelector('#theme-icon');
 
 playBtn.addEventListener("click", startTimer);
 stopBtn.addEventListener("click", stopTimer);
 pauseBtn.addEventListener("click", pauseTimer);
 lapBtn.addEventListener("click", lapTimer);
 clearBtn.addEventListener("click", clearLap);
+themeBtn.addEventListener("change", themeChange);
+
+function themeChange(){
+    mainContainer.classList.toggle('darkMode');
+    themeIcon.classList.toggle('moon');
+    mainContainer.classList.toggle('lightMode');
+    themeIcon.classList.toggle('sun');
+}
 
 function btnToggle(btn){
     btn.classList.toggle("hidden");
